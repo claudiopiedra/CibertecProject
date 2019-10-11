@@ -1,5 +1,43 @@
 package pe.somia.restaurant.service;
 
-public class RestaurantServiceImpl {
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import pe.somia.restaurant.dao.RestaurantDAO;
+import pe.somia.restaurant.model.Restaurant;
+
+@Service
+public class RestaurantServiceImpl implements RestaurantService{
+
+	@Autowired
+	private RestaurantDAO restaurantDAO;
+	
+	@Override
+	public List<Restaurant> findAll() {
+		return restaurantDAO.findAll();
+	}
+
+	@Override
+	public Restaurant saveRestaurant(Restaurant restaurant) {
+		return restaurantDAO.save(restaurant);
+	}
+
+	@Override
+	public Restaurant updateRestaurant(Restaurant restaurant) {
+		return restaurantDAO.saveAndFlush(restaurant);
+	}
+
+	@Override
+	public Restaurant findByRestaurantid(int restaurantid) {
+		return restaurantDAO.findById(restaurantid).get();
+	}
+
+	@Override
+	public void deleteRestaurant(int restaurantid) {
+		restaurantDAO.deleteById(restaurantid);
+	}
+
+	
 }
