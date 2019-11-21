@@ -17,12 +17,29 @@ public class Restaurant {
 	@Column(name="restaurantname", length = 50)
 	private String restaurantname;
 	
+	@Column(name= "level", length = 200)
+	private String description;
+	
 	@Column(name="type", length = 10)
 	private String type; 
 	
-	@Column(name = "location", length = 10)
-	private String location;
+	@Column(name = "district", length = 10)
+	private String district;
+
+	@Column(name = "mainAddress", length = 50)
+	private String mainAddress;
+
+	@Column(name = "phone", length = 9)
+	private String phone;
 	
-	@Column(name= "level", length = 5)
-	private String level;
+	@Column(name = "preciopromedio", length = 10)
+	private String preciopromedio;
+	
+	@Column(name = "sitioweb", length = 100)
+	private String sitioweb;
+	
+	@Column(name = "atencion", length = 200)
+	private String atencion;
+	
+	
 }

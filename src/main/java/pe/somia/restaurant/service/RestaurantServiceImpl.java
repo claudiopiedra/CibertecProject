@@ -39,5 +39,18 @@ public class RestaurantServiceImpl implements RestaurantService{
 		restaurantDAO.deleteById(restaurantid);
 	}
 
-	
+	@Override
+	public Restaurant findByRestaurantname(String restaurantname) {
+		return restaurantDAO.findByRestaurantname(restaurantname);
+	}
+
+	@Override
+	public Restaurant findByDistrict(String district) {
+		return restaurantDAO.findByDistrict(district);
+	}
+
+	@Override
+	public Restaurant findByType(String type) {
+		return restaurantDAO.findByType(type);
+	}
 }

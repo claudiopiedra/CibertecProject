@@ -15,4 +15,12 @@ public interface RestaurantService {
 	public Restaurant findByRestaurantid(int restaurantid);
 		
 	public void deleteRestaurant(int restaurantid);
+	
+	public Restaurant findByRestaurantname(String restaurantname);
+
+	public Restaurant findByDistrict(String district);
+
+	public Restaurant findByType(String type);
+
+
 }
