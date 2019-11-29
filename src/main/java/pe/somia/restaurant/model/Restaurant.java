@@ -20,10 +20,10 @@ public class Restaurant {
 	@Column(name= "level", length = 200)
 	private String description;
 	
-	@Column(name="type", length = 10)
+	@Column(name="type", length = 20)
 	private String type; 
 	
-	@Column(name = "district", length = 10)
+	@Column(name = "district", length = 20)
 	private String district;
 
 	@Column(name = "mainAddress", length = 50)
