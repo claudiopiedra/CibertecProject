@@ -29,17 +29,17 @@ public class RestaurantRestController {
 	}
 	
 	@GetMapping(value= "/getrestaurantforName/{restaurantname}")
-	public Restaurant findByRestaurantName(@PathVariable(name= "restaurantname") String restaurantname){
+	public List<Restaurant> findByRestaurantName(@PathVariable(name= "restaurantname") String restaurantname){
 		return restaurantService.findByRestaurantname(restaurantname);
 	}
 	
 	@GetMapping(value= "/getrestaurantforDistrict/{district}")
-	public Restaurant findByDistrict(@PathVariable(name= "district") String district){
+	public List<Restaurant> findByDistrict(@PathVariable(name= "district") String district){
 		return restaurantService.findByDistrict(district);
 	}
 	
 	@GetMapping(value= "/getrestaurantforType/{type}")
-	public Restaurant findByType(@PathVariable(name= "type") String type){
+	public List<Restaurant> findByType(@PathVariable(name= "type") String type){
 		return restaurantService.findByType(type);
 	}
 	

@@ -16,11 +16,11 @@ public interface RestaurantService {
 		
 	public void deleteRestaurant(int restaurantid);
 	
-	public Restaurant findByRestaurantname(String restaurantname);
+	public List<Restaurant> findByRestaurantname(String restaurantname);
 
-	public Restaurant findByDistrict(String district);
+	public List<Restaurant> findByDistrict(String district);
 
-	public Restaurant findByType(String type);
+	public List<Restaurant> findByType(String type);
 
 
 }

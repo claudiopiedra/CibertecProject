@@ -40,17 +40,17 @@ public class RestaurantServiceImpl implements RestaurantService{
 	}
 
 	@Override
-	public Restaurant findByRestaurantname(String restaurantname) {
+	public List<Restaurant> findByRestaurantname(String restaurantname) {
 		return restaurantDAO.findByRestaurantname(restaurantname);
 	}
 
 	@Override
-	public Restaurant findByDistrict(String district) {
+	public List<Restaurant> findByDistrict(String district) {
 		return restaurantDAO.findByDistrict(district);
 	}
 
 	@Override
-	public Restaurant findByType(String type) {
+	public List<Restaurant> findByType(String type) {
 		return restaurantDAO.findByType(type);
 	}
 }
