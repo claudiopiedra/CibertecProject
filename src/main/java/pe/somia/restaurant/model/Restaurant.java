@@ -40,6 +40,11 @@ public class Restaurant {
 	
 	@Column(name = "atencion", length = 200)
 	private String atencion;
-	
-	
+
+	@Column(name = "horariodisponible", length = 200)
+	private String horariodisponible;
+
+	@Column(name = "nombrepersona", length = 200)
+	private String nombrepersona;
+
 }

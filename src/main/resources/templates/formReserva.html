@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, minFum-scale=1, maximum-scale=1"/>
+	
+	<title>Reserva Somia</title>
+	<meta name="description" content="Add your business website description here">
+	<meta name="keywords" content="Add your business website keywords here">
+
+	<link href="favicon.html" rel="icon">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="templates/restaurant/css/bootstrap.min.css">
+	<link rel="stylesheet" href="templates/restaurant/css/font-awesome.min.css">
+	<link rel="stylesheet" href="templates/restaurant/css/contact-form.css" type="text/css">
+</head>
+
+<body>
+<div class="container my-5">
+	<h3> Reserva</h3>
+	<div class="card">
+		<div class="card-body">
+			<div class="col-md-10">
+				<form action="#" th:action="@{/reserva/reservar}" th:object="${reservax}" method="post">
+					<div class="row">
+						<div class="form-group col-md-8">
+							<label for="name" class="col-form-label">Nombre Restaurante:</label> <input type="text" th:field="*{restaurantname}" class="form-control" id="name" placeholder="Name">
+						</div>
+						<div class="form-group col-md-8">
+							<label for="email" class="col-form-label">Tipo Comida:</label> <input type="text" th:field="*{type}" class="form-control" id="email" placeholder="Email">
+						</div>
+
+						<div class="form-group col-md-8">
+							<label for="phoneNo" class="col-form-label">Distrito:</label> <input type="text" th:field="*{district}" class="form-control" id="phoneNo" placeholder="PhoneNo">
+						</div>
+						<div class="form-group col-md-8">
+							<label for="phoneNo" class="col-form-label">Ingresa tu Nombre:</label> <input type="text" th:field="*{nombrePersona}" class="form-control" id="phoneNo" placeholder="PhoneNo">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputState">Horario a elegir</label>
+							<select id="inputState" class="form-control">
+								<option selected>12:00</option>
+								<option selected>13:00</option>
+								<option selected>14:00</option>
+								<option selected>15:00</option>
+								<option selected>16:00</option>
+								<option selected>17:00</option>
+								<option selected>18:00</option>
+								<option selected>19:00</option>
+								<option selected>20:00</option>
+								<option selected>21:00</option>
+								<option selected>22:00</option>
+							</select>
+						</div>
+						<div class="col-md-6">
+							<!--<input th:href="@{'/reserva/ver/' + ${reserva.reservaid}}" type="submit" class="btn btn-primary" value="RESERVA AHORA">-->
+						</div>
+
+						<div class="form-group col-md-8"></div>
+
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- jQuery Library -->
+	<script src="templates/restaurant/js/jquery-3.2.1.min.js"></script>
+	<!-- Popper js -->
+	<script src="templates/restaurant/js/popper.min.js"></script>
+	<!-- Bootstrap Js -->
+	<script src="templates/restaurant/js/bootstrap.min.js"></script>
+	<!-- Form Validator -->
+	<script src="templates/restaurant/js/validator.min.js"></script>
+	<!-- Contact Form Js -->
+	<script src="templates/restaurant/js/contact-form.js"></script>
+	
+</body>
+</html>

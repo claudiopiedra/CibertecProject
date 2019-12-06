@@ -6,21 +6,21 @@ import pe.somia.restaurant.model.Restaurant;
 
 public interface RestaurantService {
 
-	public List<Restaurant> findAll();
+	List<Restaurant> findAll();
 	
-	public Restaurant saveRestaurant(Restaurant restaurant);
+	Restaurant saveRestaurant(Restaurant restaurant);
 			
-	public Restaurant updateRestaurant(Restaurant restaurant);
+	Restaurant updateRestaurant(Restaurant restaurant);
 	
-	public Restaurant findByRestaurantid(int restaurantid);
+	Restaurant findByRestaurantid(int restaurantid);
 		
-	public void deleteRestaurant(int restaurantid);
+	void deleteRestaurant(int restaurantid);
 	
-	public List<Restaurant> findByRestaurantname(String restaurantname);
+	List<Restaurant> findByRestaurantname(String restaurantname);
 
-	public List<Restaurant> findByDistrict(String district);
+	List<Restaurant> findByDistrict(String district);
 
-	public List<Restaurant> findByType(String type);
+	List<Restaurant> findByType(String type);
 
 
 }

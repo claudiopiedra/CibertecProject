@@ -10,7 +10,7 @@ import pe.somia.restaurant.model.Restaurant;
 @Repository
 public interface RestaurantDAO extends JpaRepository<Restaurant, Integer>{
 	
-	public List<Restaurant> findByRestaurantname(String restaurantname);
-	public List<Restaurant> findByDistrict(String district);
-	public List<Restaurant> findByType(String type);
+	List<Restaurant> findByRestaurantname(String restaurantname);
+	List<Restaurant> findByDistrict(String district);
+	List<Restaurant> findByType(String type);
 }
